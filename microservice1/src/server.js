@@ -5,7 +5,7 @@ require("express-async-errors");
 
 const processId = process.pid;
 const app = express();
-const port = 3068;
+const port = 80;
 
 app.use(helmet());
 app.use(express.json({ type: ["text/*, */json"] }));
