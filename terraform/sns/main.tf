@@ -28,13 +28,13 @@ resource "aws_sns_topic" "sns" {
 resource "aws_sns_topic_subscription" "http_subscription_microservice1" {
   topic_arn = aws_sns_topic.sns.arn
   protocol  = "http"
-  endpoint  = "http://3.87"
+  endpoint  = "http://184.72.150.128:80"
 }
 
 resource "aws_sns_topic_subscription" "http_subscription_microservice2" {
   topic_arn = aws_sns_topic.sns.arn
   protocol  = "http"
-  endpoint  = "http://44.7"
+  endpoint  = "http://54.147.150.243:80"
 }
 
 output "sns_arn" {

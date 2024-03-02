@@ -8,7 +8,7 @@ const app = express();
 const port = 3333;
 
 app.use(helmet());
-app.use(express.json({ type: ["text/*, */json"] }));
+app.use(express.json({ type: ["*/json", "text/*"] }));
 app.use(cors());
 
 const data = [];
@@ -58,7 +58,7 @@ app.post("/", async (req, res) => {
     console.log("Message => " + req.body.Message);
     data.push({
       m: req.body.Message,
-      t: new Date().toLocaleDateString(),
+      t: new Date().toLocaleString(),
     });
   }
 
