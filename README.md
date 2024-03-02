@@ -55,6 +55,6 @@
       terraform apply plan.out
     ```
 - Pegar o ARN do tópico criado e adicionar o valor na variável de ambiente `TOPIC_ARN` no arquivo `.env`
-- verificar o log das vms é acessar a url que estará no log, para se inscrever no tópico.
+- verificar o log das vms, é acessar a url que estará no log, para se inscrever no tópico.
 - Acessar a pasta server e rodar a aplicação localmente.
 - Fazer as requisições para enviar as mensagens para o tópico
