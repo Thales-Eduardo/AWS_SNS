@@ -19,7 +19,7 @@
 
   - ```bash
     export AWS_ACCESS_KEY_ID="sua key"
-    export AWS_SECRET_ACCESS_KEY="sua secrete"
+    export AWS_SECRET_ACCESS_KEY="sua secret"
 
     cd terraform/vm
     terraform init
