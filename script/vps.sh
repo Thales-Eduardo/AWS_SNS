@@ -1,10 +1,4 @@
-export AWS_ACCESS_KEY_ID=""
-export AWS_SECRET_ACCESS_KEY=""
-
-#36
-# add docker nginx
-
-git clone https://github.com/Thales-Eduardo/AWS_SNS.git app && cd app/microservice2
+git clone https://github.com/Thales-Eduardo/AWS_SNS.git app && cd app/microservice1
 
 sudo apt install apt-transport-https ca-certificates curl software-properties-common \
   && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
@@ -17,7 +11,7 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
  && sudo chmod +x /usr/local/bin/docker-compose && docker-compose --version
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && source ~/.bashrc \
- && nvm --version && nvm install 20.9.0 && node -v && npm install
+ && nvm --version && nvm install 20.9.0 && node -v && npm install && sudo apt update
 
 sudo docker-compose up -d
 
