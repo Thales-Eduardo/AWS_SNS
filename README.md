@@ -11,7 +11,7 @@
   </div>
 </div>
 
-# Como Rodar o Projeto
+# Como Executar o Projeto
 
 - Ter o terraform instalado na sua maquina
 - Pegar sua chave ssh pública e adicionar no arquivo na pasta `terraform/vm`
