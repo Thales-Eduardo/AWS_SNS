@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  app1:
+    build:
+      dockerfile: ./docker/nodejs.dockerfile
+      context: .
+    container_name: node1
+    restart: always
+    ports:
+      - 3333
+    volumes:
+      - .:/usr/app
+    mem_reservation: 256m
+    cpus: 1
+
+  app2:
+    build:
+      dockerfile: ./docker/nodejs.dockerfile
+      context: .
+    container_name: node2
+    restart: always
+    ports:
+      - 3333
+    volumes:
+      - .:/usr/app
+    mem_reservation: 256m
+    cpus: 1
+
+  nginx-proxy:
+    build:
+      dockerfile: ./docker/nginx.proxy.dockerfile
+      context: .
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - app1
+      - app2
+    volumes:
+      - .:/usr/app/nginx-proxy
+    mem_reservation: 256m
+    cpus: 1
